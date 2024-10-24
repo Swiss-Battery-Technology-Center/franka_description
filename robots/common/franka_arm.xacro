@@ -154,5 +154,49 @@
       <child link="end_effector" />
     </joint>
     
+        <!-- Unscrewer tool link -->
+    <link name="unscrewer">
+      <visual>
+        <geometry>
+          <!-- Use the unscrewer mesh -->
+          <mesh filename="package://franka_description/meshes/robot_arms/fr3/visual/unscrewer.dae" scale="1 1 1"/> <!-- Adjust the scale as necessary -->
+        </geometry>
+        <origin xyz="0 0 0" rpy="0 0 0.0"/>  <!-- Adjust the position of the unscrewer relative to the gripper 0 3.14159 0.785398163 -->
+        <material name="gray">
+          <color rgba="0.5 0.5 0.5 1"/>
+        </material>
+      </visual>
+
+      <collision>
+        <!-- First cylinder (larger one) with radius 0.01575 m and length 104.8 mm -->
+        <geometry>
+          <cylinder radius="0.01575" length="0.1048"/>
+        </geometry>
+        <origin xyz="0 0 -0.0524" rpy="0 0 0"/> <!-- Positioning to place it in the lower part-->
+      </collision>
+
+      <collision>
+        <!-- Second cylinder (smaller one) with radius 0.0385 m and length 104.8 mm -->
+        <geometry>
+          <cylinder radius="0.0385" length="0.085"/>
+        </geometry>
+        <origin xyz="0 0 -0.1473" rpy="0 0 0"/> <!-- Positioned to stack on top of the first cylinder -->
+      </collision>
+      
+      <inertial>
+        <mass value="0.264659"/> <!-- Updated mass of the unscrewer -->
+        <origin xyz="-0.00000023 0.0000002276 -0.09747" rpy="0 0 0"/> <!-- Updated center of mass, converted to meters 0 3.14159 0.785398163 -->
+        <inertia ixx="0.000461783" ixy="0" ixz="0" iyy="0.000446552" iyz="-0.000000005" izz="0.000047542"/>
+      </inertial>
+    </link>
+
+    <!-- Fixed joint to attach unscrewer to link8 -->
+    <joint name="unscrewer_joint" type="fixed">
+      <xacro:franka-kinematics name="joint_unscrewer" config="${kinematics}" />
+      <parent link="${arm_id}_link8"/>
+      <child link="unscrewer"/>
+      <origin xyz="0 0 0.2407953" rpy="0 0 ${-pi/4}"/> 
+    </joint>
+
   </xacro:macro>
 </robot>
