@@ -153,12 +153,18 @@
       <parent link="${arm_id}_hand" />
       <child link="end_effector" />
     </joint>
+
+    <link name="end_effector_unscrewer_reach_test"/>
+    <joint name="end_effector_unscrewer_reach_test_joint" type="fixed">
+      <xacro:franka-kinematics name="joint_end_effector_unscrewer_reach_test" config="${kinematics}" />
+      <parent link="${arm_id}_hand" />
+      <child link="end_effector_unscrewer_reach_test" />
+    </joint>
     
-        <!-- Unscrewer tool link -->
+    <!-- Unscrewer tool link -->
     <link name="unscrewer">
       <visual>
         <geometry>
-         
           <mesh filename="package://franka_description/meshes/robot_arms/fr3/visual/unscrewer.dae" scale="1 1 1"/>
         </geometry>
         <origin xyz="0 0 0" rpy="0 0 0.0"/>  
@@ -166,23 +172,18 @@
           <color rgba="0.5 0.5 0.5 1"/>
         </material>
       </visual>
-
       <collision>
-        
         <geometry>
           <cylinder radius="0.01575" length="0.1048"/>
         </geometry>
         <origin xyz="0 0 -0.0524" rpy="0 0 0"/>
       </collision>
-
       <collision>
-        
         <geometry>
           <cylinder radius="0.0385" length="0.085"/>
         </geometry>
         <origin xyz="0 0 -0.1473" rpy="0 0 0"/> 
       </collision>
-      
       <inertial>
         <mass value="0.264659"/> 
         <origin xyz="-0.00000023 0.0000002276 -0.09747" rpy="0 0 0"/> 
@@ -207,14 +208,12 @@
           <color rgba="1 1 1 1"/>
         </material>
       </visual>
-    
       <collision>
         <geometry>
           <cylinder radius="0.027" length="0.20993"/>
         </geometry>
         <origin xyz="0 0 -0.104965" rpy="0 0 0"/>
       </collision>
-    
       <inertial>
         <mass value="0.178"/> 
         <origin xyz="-0.005423 0.000141 -0.097517" rpy="0 0 0"/> 

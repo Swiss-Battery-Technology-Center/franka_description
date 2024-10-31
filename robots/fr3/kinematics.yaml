@@ -71,7 +71,6 @@ joint8:
     pitch: 0
     yaw: 0
 
-# Joint to tool origin
 joint_ee:
   kinematic:
     x: 0
@@ -80,8 +79,14 @@ joint_ee:
     roll: 0
     pitch: 0
     yaw: 0
-
-# Joint to tool origin
+joint_end_effector_unscrewer_reach_test:
+  kinematic:
+    x: 0
+    y: 0
+    z: 0.28
+    roll: 0
+    pitch: 0
+    yaw: 0
 joint_unscrewer:
   kinematic:
     x: 0
@@ -90,7 +95,6 @@ joint_unscrewer:
     roll: 0
     pitch: 0
     yaw: -0.78539816339
-
 joint_camera:
   kinematic:
     x: 0.03889
