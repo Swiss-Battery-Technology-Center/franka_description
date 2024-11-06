@@ -145,14 +145,5 @@
       <parent link="${arm_id}_link7" />
       <child link="${arm_id}_link8" />
     </joint>
-
-    <!-- Define the end_effector frame used in Isaac Sim -->
-    <link name="end_effector"/>
-    <joint name="end_effector_joint" type="fixed">
-      <xacro:franka-kinematics name="joint_ee" config="${kinematics}" />
-      <parent link="${arm_id}_hand" />
-      <child link="end_effector" />
-    </joint>
-    
   </xacro:macro>
 </robot>

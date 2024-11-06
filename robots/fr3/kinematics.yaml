@@ -70,13 +70,3 @@ joint8:
     roll: 0
     pitch: 0
     yaw: 0
-
-# Joint to tool origin
-joint_ee:
-  kinematic:
-    x: 0
-    y: 0
-    z: 0.126
-    roll: 0
-    pitch: 0
-    yaw: 0
