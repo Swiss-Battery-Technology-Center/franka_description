@@ -124,8 +124,7 @@
 
     <xacro:link_with_sc name="link7" gazebo="${gazebo}" rpy="0 0 ${pi/4}" with_sc="${with_sc}">
       <self_collision_geometries>
-        <xacro:collision_capsule xyz="0 0 0.01" direction="z" radius="${0.04+safety_distance}" length="0.14" />
-        <xacro:collision_capsule xyz="0.06 0 0.082" direction="x" radius="${0.03+safety_distance}"  length="0.01" />
+
       </self_collision_geometries>
     </xacro:link_with_sc>
 
@@ -157,23 +156,9 @@
           <color rgba="0.5 0.5 0.5 1"/>
         </material>
       </visual>
-      <collision>
-        <geometry>
-          <cylinder radius="0.01575" length="0.1048"/>
-        </geometry>
-        <origin xyz="0 0 -0.0524" rpy="0 0 0"/>
-      </collision>
-      <collision>
-        <geometry>
-          <cylinder radius="0.0385" length="0.085"/>
-        </geometry>
-        <origin xyz="0 0 -0.1473" rpy="0 0 0"/> 
-      </collision>
-      <inertial>
-        <mass value="0.264659"/> 
-        <origin xyz="-0.00000023 0.0000002276 -0.09747" rpy="0 0 0"/> 
-        <inertia ixx="0.000461783" ixy="0" ixz="0" iyy="0.000446552" iyz="-0.000000005" izz="0.000047542"/>
-      </inertial>
+        <xacro:collision_capsule xyz="0 0 -0.149" direction="z" radius="0.044" length="0.045" />
+        <xacro:collision_capsule xyz="0 0 -0.05" direction="z" radius="0.02" length="0.065" />
+        <xacro:franka-inertials name="link_unscrewer" inertials="${inertials}" />
     </link>
     
     <joint name="unscrewer_joint" type="fixed">
@@ -192,17 +177,8 @@
           <color rgba="1 1 1 1"/>
         </material>
       </visual>
-      <collision>
-        <geometry>
-          <cylinder radius="0.027" length="0.20993"/>
-        </geometry>
-        <origin xyz="0 0 -0.104965" rpy="0 0 0"/>
-      </collision>
-      <inertial>
-        <mass value="0.178"/> 
-        <origin xyz="-0.005423 0.000141 -0.097517" rpy="0 0 0"/> 
-        <inertia ixx="0.000934085" ixy="0.000000103" ixz="-0.000064273" iyy="0.000938346" iyz="0.000001638" izz="0.000037901"/>
-      </inertial>
+        <xacro:collision_capsule xyz="0 0 -0.085" direction="z" radius="0.026" length="0.19" />
+        <xacro:franka-inertials name="link_camera" inertials="${inertials}" />
     </link>
     
     <joint name="camera_joint" type="fixed">
