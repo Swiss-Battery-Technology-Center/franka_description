@@ -71,16 +71,16 @@ joint8:
     pitch: 0
     yaw: 0
 
-joint_unscrewer:
+unscrewer:
   kinematic:
     x: 0
     y: 0
-    z: 0.2407953
+    z: 0.24065
     roll: 0
     pitch: 0
     yaw: -0.78539816339
 
-joint_camera:
+camera:
   kinematic:
     x: 0.03889
     y: -0.03889

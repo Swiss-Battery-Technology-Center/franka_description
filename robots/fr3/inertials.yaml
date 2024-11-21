@@ -96,7 +96,7 @@ link7:
     yz: 8.744070223226438e-05
     zz: 5.993190599659971e-05
 
-link_unscrewer:
+unscrewer:
   origin:
     xyz: -0.00000023 0.0000002276 -0.09747
     rpy: 0 0 0
@@ -109,7 +109,7 @@ link_unscrewer:
     yz: 0
     zz: 0.000047542
 
-link_camera:
+camera:
   origin:
     xyz: -0.005423 0.000141 -0.097517
     rpy: 0 0 0
