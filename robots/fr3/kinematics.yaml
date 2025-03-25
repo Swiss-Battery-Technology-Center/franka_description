@@ -75,7 +75,7 @@ unscrewer:
   kinematic:
     x: 0
     y: 0
-    z: 0.24065
+    z: 0.2403
     roll: 0
     pitch: 0
     yaw: -0.78539816339
