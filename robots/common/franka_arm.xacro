@@ -151,29 +151,29 @@
     </joint>
     
     <!-- Unscrewer tool link -->
-    <xacro:link_with_sc name="unscrewer" gazebo="${gazebo}" rpy="0 0 ${pi/4}" with_sc="${with_sc}">
+    <xacro:link_with_sc name="${prefix}unscrewer" gazebo="${gazebo}" rpy="0 0 ${pi/4}" with_sc="${with_sc}">
       <self_collision_geometries>
         <xacro:collision_capsule xyz="0 0 -0.149" direction="z" radius="${0.044+safety_distance}" length="0.045" />
         <xacro:collision_capsule xyz="0 0 -0.05" direction="z" radius="${0.02+safety_distance}" length="0.065" />
       </self_collision_geometries>
     </xacro:link_with_sc>
         
-    <joint name="unscrewer" type="fixed">
+    <joint name="${prefix}unscrewer" type="fixed">
       <xacro:franka-kinematics name="unscrewer" config="${kinematics}" />
-      <parent link="${arm_id}_link8"/>
-      <child link="${arm_id}_unscrewer"/>
+      <parent link="${prefix}link8"/>
+      <child link="${prefix}unscrewer"/>
     </joint>
 
-    <xacro:link_with_sc name="camera" gazebo="${gazebo}" rpy="0 0 ${pi/4}" with_sc="${with_sc}">
+    <xacro:link_with_sc name="${prefix}camera" gazebo="${gazebo}" rpy="0 0 ${pi/4}" with_sc="${with_sc}">
       <self_collision_geometries>
         <xacro:collision_capsule xyz="0 0 -0.085" direction="z" radius="${0.026+safety_distance}" length="0.19" />
       </self_collision_geometries>
     </xacro:link_with_sc>
     
-    <joint name="camera" type="fixed">
+    <joint name="${prefix}camera" type="fixed">
       <xacro:franka-kinematics name="camera" config="${kinematics}" />
-      <parent link="${arm_id}_link8"/>
-      <child link="${arm_id}_camera"/>
+      <parent link="${prefix}link8"/>
+      <child link="${prefix}camera"/>
     </joint>
 
   </xacro:macro>
