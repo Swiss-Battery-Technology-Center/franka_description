@@ -82,9 +82,9 @@ unscrewer:
 
 camera:
   kinematic:
-    x: 0.03889
-    y: -0.03889
-    z: 0.20143
+    x: 0.0
+    y: 0.0
+    z: 0.0
     roll: 0
     pitch: 0
-    yaw: -0.78539816339    
+    yaw: -1.5708   
