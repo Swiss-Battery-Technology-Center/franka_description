@@ -5,6 +5,7 @@ Changelog for package franka_description
 UNRELEASED
 ---------------
 * fix: gazebo can be used with prefixes
+* fix: ee_with_one_link takes the correct arguments to allow visualization
 
 1.0.1 (2025-07-09)
 ---------------

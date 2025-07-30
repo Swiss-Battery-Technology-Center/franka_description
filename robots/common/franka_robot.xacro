@@ -80,14 +80,14 @@
     <xacro:if value="${hand and ee_id != 'none' and ee_id != 'franka_hand'}">
       <xacro:include filename="$(find franka_description)/end_effectors/common/ee_with_one_link.xacro"/>
       <xacro:include filename="$(find franka_description)/end_effectors/common/utils.xacro" />
-      <xacro:property name="special_connection" value="${special_connection}" />
-      <xacro:property name="connection" value="${special_connection if special_connection == '' else arm_id + '_link8'}" />
+      <xacro:property name="special_connection" value="$(arg special_connection)" />
+      <xacro:property name="connection" value="${special_connection if special_connection != '' else arm_id + '_link8'}" />
       <xacro:ee_with_one_link
         connected_to="${arm_prefix}${connection}"
         arm_id="${arm_id}"
         arm_prefix="${arm_prefix}"
         ee_id="${ee_id}"
-        ee_inertials="${xacro.load_yaml('$(find franka_description)/end_effectors/${ee_id}/inertials.yaml')}"
+        ee_inertials="${xacro.load_yaml('$(find franka_description)/end_effectors/' + ee_id + '/inertials.yaml')}"
         rpy_ee="${rpy_ee}"
         xyz_ee="${xyz_ee}"
         tcp_xyz="${tcp_xyz}"
