@@ -2,6 +2,10 @@
 Changelog for package franka_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+UNRELEASED
+---------------
+* fix: gazebo can be used with prefixes
+
 1.0.1 (2025-07-09)
 ---------------
 * fix: cover and mount replaced by new designs
