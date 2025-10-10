@@ -2,6 +2,17 @@
 Changelog for package franka_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+UNRELEASED
+----------
+* fix: add fp3 robot joint limits
+* fix: group definition in SRDF file checking for right TCP
+
+1.1.0
+----------
+* feat: added accelerometer frames to urdfs
+* feat: update joint limits for fr3v2 and fr3
+* feat: add position based velocity limits tags to urdfs for fr3v2 and fr3
+
 1.0.2 (2025-08-01)
 ---------------
 * fix: gazebo can be used with prefixes
