@@ -8,6 +8,10 @@ Changelog for package franka_description
 * fix: group definition in SRDF file checking for right TCP
 * feat: add fr3v2.1 robot variant
 
+2.0.0 (2025-08-26)
+------------------
+* feat: migrate to ROS 2 Jazzy
+
 1.1.0
 ----------
 * feat: added accelerometer frames to urdfs
