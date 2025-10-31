@@ -2,6 +2,10 @@
 Changelog for package franka_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+UNRELEASED
+----------
+* feat: updated kinematics, meshes, inertials, materials for fr3_duo mount and cover
+
 2.1.0 (2025-10-24)
 ----------
 * fix: add fp3 robot joint limits
