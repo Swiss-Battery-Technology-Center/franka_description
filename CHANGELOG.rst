@@ -2,11 +2,15 @@
 Changelog for package franka_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-UNRELEASED
+2.1.0 (2025-10-24)
 ----------
 * fix: add fp3 robot joint limits
 * fix: group definition in SRDF file checking for right TCP
 * feat: add fr3v2.1 robot variant
+
+2.0.0 (2025-08-26)
+------------------
+* feat: migrate to ROS 2 Jazzy
 
 1.1.0
 ----------
