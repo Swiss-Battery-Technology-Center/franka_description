@@ -39,8 +39,5 @@
             </xacro:if>
         </xacro:if>
 
-        <xacro:include filename="$(find franka_description)/robots/common/fr3_arm_unscrewer.xacro"/>
-        <xacro:fr3_arm_unscrewer arm_id="${arm_id}"/>
-
     </xacro:macro>
 </robot>
